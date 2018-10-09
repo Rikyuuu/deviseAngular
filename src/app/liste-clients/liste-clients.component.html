@@ -1,0 +1,30 @@
+
+<h2>LECTURE DES CLEFS VALEURS DU FICHIER JSON</h2>
+<!--<ul>
+  <li *ngFor="let client of clients$">
+    {{ client.id_utilisateur }}
+
+    <ul>
+      <li>{{ client.LOGIN }}</li>
+      <li>{{ client.NOM }}</li>
+      <li>{{ client.PRENOM }}</li>
+    </ul>
+  </li>
+</ul>
+-->
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Prenom</th>
+      <th scope="col">E-mail</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let client of clients$">
+    <tr>
+      <th scope="row">{{ client.NOM }}</th>
+      <td>{{ client.PRENOM }}</td>
+      <td>{{ client.EMAIL }}</td>
+    </tr>
+  </tbody>
+</table>

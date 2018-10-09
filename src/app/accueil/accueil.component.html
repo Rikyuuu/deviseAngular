@@ -1,0 +1,17 @@
+
+<!-- SI connecté en tant que conseiller -->
+<p>Liste des nouveaux clients attribués : 2</p>
+<p>Nombre total de clients attribués : 254</p>
+<p>Nombre de demandes à traiter : 54</p>
+
+<h2>LECTURE DES CLEFS VALEURS DU FICHIER JSON</h2>
+<ul>
+  <li *ngFor="let user of users$">
+    {{ user.id }}
+
+    <ul>
+      <li>{{ user.login }}</li>
+      <li>{{ user.password }}</li>
+    </ul>
+  </li>
+</ul>

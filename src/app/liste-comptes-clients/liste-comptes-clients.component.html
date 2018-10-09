@@ -1,0 +1,23 @@
+
+<h2>LECTURE DES CLEFS VALEURS DU FICHIER JSON</h2>
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Type de compte</th>
+      <th scope="col">RIB</th>
+      <th scope="col">Date de création du compte</th>
+      <th scope="col">Seuil de transfert</th>
+      <th scope="col">solde</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let compte of comptes">
+    <tr>
+      <th scope="row" *ngIf="CRE">{{ compte.type_compte }}</th>
+      <td>{{ compte.RIB }}</td>
+      <td>{{ compte.dateCreation }}</td>
+      <td>{{ compte.seuilTransfert }}</td>
+      <td>{{ compte.solde }}</td>
+    </tr>
+  </tbody>
+</table>

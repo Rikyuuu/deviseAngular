@@ -1,0 +1,23 @@
+[
+    {
+        "id_utilisateur": 1,
+        "EMAIL": "truc@hotmail.fr",
+        "LOGIN": "Pierre",
+        "NOM": "Dumont",
+        "PRENOM": "Pierre"
+    },
+    {
+        "id_utilisateur": 2,
+        "EMAIL": "melanie@hotmail.fr",
+        "LOGIN": "Mélanie",
+        "NOM": "Dahel",
+        "PRENOM": "Mélanie"
+    },
+    {
+        "id_utilisateur": 3,
+        "EMAIL": "julien@hotmail.fr",
+        "LOGIN": "Julien",
+        "NOM": "Delissenne",
+        "PRENOM": "Julien"
+    }
+]

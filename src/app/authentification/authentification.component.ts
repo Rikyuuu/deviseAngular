@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-authentification',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthentificationComponent implements OnInit {
 
-  constructor() { }
+  users$: Object;
+  
+  constructor(private data: UserService) { }
 
   ngOnInit() {
+    this.data.getUsers().subscribe(
+      data => this.users$ = data 
+    );
   }
 
 }

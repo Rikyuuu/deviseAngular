@@ -1,0 +1,18 @@
+[
+    {
+        "id_compte": 1,
+        "type_compte": "CRE",
+        "RIB": "RIBQUELCONQUE",
+        "dateCreation": "1970-01-02 00:00:01",
+        "seuilTransfert": "200",
+        "solde": 50
+    },
+    {
+        "id_compte": 2,
+        "type_compte": "CDE",
+        "RIB": "RIBQUELCONQUE2",
+        "dateCreation": "1972-01-02 00:00:01",
+        "seuilTransfert": "150",
+        "solde": 60
+    }
+]
