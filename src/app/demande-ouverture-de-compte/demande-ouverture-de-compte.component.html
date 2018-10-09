@@ -1,7 +1,7 @@
 
 <h2>Demandes d'ouverture de compte</h2>
 <hr>
-<form #form = "ngForm" (ngSubmit) = "getVerificationCheckboxValidation(form)" [formGroup]="profileForm">
+<form (ngSubmit) = "onSubmit()" [formGroup]="profileForm">
   <table class="table table-striped table-dark">
     <thead>
       <tr>
@@ -18,23 +18,12 @@
         <td>{{ demande.date }}</td>
         <td>
           <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" name="test" id="customCheck{{ i }}" [checked]="demande.checked">
+            <input type="checkbox" class="custom-control-input" formControlName="customCheck{{ i }}" id="customCheck{{ i }}">
             <label class="custom-control-label" for="customCheck{{ i }}">Valider la demande d'ouverture</label>
           </div>
         </td>
       </tr>
     </tbody>
-  </table>
-  <table>
-    <tr *ngFor="let demande of demandes; let j = index">
-        <td>
-            <input type="checkbox" [checked]="demande.checked" formControlName="hello" id="{{demande.roleID}}" />
-       </td>
-       <td>
-
-       </td>
-       <td>Voici demandes{{ j }}</td>
-    </tr>
   </table>
   <button class="col-2 offset-10 addAccount">Valider</button>
 </form>

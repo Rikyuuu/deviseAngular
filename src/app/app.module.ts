@@ -14,6 +14,8 @@ import { DemandeOuvertureDeCompteComponent } from './demande-ouverture-de-compte
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TestFormulaireComponent } from './test-formulaire/test-formulaire.component';
+import { NameEditorComponent } from './name-editor/name-editor.component';
+import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { TestFormulaireComponent } from './test-formulaire/test-formulaire.compo
     ListeComptesClientsComponent,
     ListeClientsComponent,
     DemandeOuvertureDeCompteComponent,
-    TestFormulaireComponent
+    TestFormulaireComponent,
+    NameEditorComponent,
+    ProfileEditorComponent
   ],
   imports: [
     BrowserModule,

@@ -12,9 +12,8 @@ export class DemandeOuvertureDeCompteComponent implements OnInit {
   demandes: Object;
 
   profileForm = new FormGroup({
-    hello: new FormControl('')
+    customCheck: new FormControl('')
   });
-  
   playerName: string;
 
   constructor(private demandeOuvertureCompte: DemandeOuvertureCompteService) { }
@@ -33,4 +32,9 @@ export class DemandeOuvertureDeCompteComponent implements OnInit {
 	return this.playerName;
   }
 
+
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
+  }
 }
