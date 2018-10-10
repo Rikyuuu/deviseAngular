@@ -1,32 +1,24 @@
-
 <h2>Demandes d'ouverture de compte</h2>
 <hr>
-<form (ngSubmit) = "onSubmit()" [formGroup]="profileForm">
-  <table class="table table-striped table-dark">
-    <thead>
-      <tr>
-        <th scope="col">Nom</th>
-        <th scope="col">N° demande</th>
-        <th scope="col">date</th>
-        <th scope="col">Validation</th>
-      </tr>
-    </thead>
-    <tbody *ngFor="let demande of demandes; let i = index">
-      <tr>
-        <th scope="row">{{ demande.nom }}</th>
-        <td>{{ demande.id_demande }}</td>
-        <td>{{ demande.date }}</td>
-        <td>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" formControlName="customCheck{{ i }}" id="customCheck{{ i }}">
-            <label class="custom-control-label" for="customCheck{{ i }}">Valider la demande d'ouverture</label>
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <button class="col-2 offset-10 addAccount">Valider</button>
-</form>
-
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">N° demande</th>
+      <th scope="col">date</th>
+      <th scope="col">Validation</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let demande of demandes; let i = index">
+      <th scope="row">{{ demande.nom }}</th>
+      <td>{{ demande.id_demande }}</td>
+      <td>{{ demande.date }}</td>
+      <td>
+          <button id="{{ demande.id_demande }}" (click)="getDemandes(demande)">Valider la demande</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <!-- Remplacer le bouton valider par cette image -->
 <!--<img src="../../assets/img/addAccount.svg" alt="" class="col-4 offset-7 addAccount">-->

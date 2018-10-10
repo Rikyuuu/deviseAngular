@@ -10,31 +10,29 @@ import { FormGroup, FormControl, NgForm } from '@angular/forms';
 export class DemandeOuvertureDeCompteComponent implements OnInit {
 
   demandes: Object;
-
-  profileForm = new FormGroup({
-    customCheck: new FormControl('')
-  });
-  playerName: string;
-
+  
+  //demandes.id_demande = new FormControl('');
+  
   constructor(private demandeOuvertureCompte: DemandeOuvertureCompteService) { }
-
+  
   ngOnInit() {
-    this.demandeOuvertureCompte.getDemandesOuvertureCompte().subscribe(
+    console.warn(this.demandeOuvertureCompte.getDemandesOuvertureCompte().subscribe(
       demandeOuvertureCompte => this.demandes = demandeOuvertureCompte 
-    );
-  }
+      ));
 
-  getVerificationCheckboxValidation(form: NgForm) {
-	console.log(form.value.test);
-	console.log(this.profileForm.value);
-	console.log("test");
-	console.log(this.playerName);
-	return this.playerName;
-  }
+    }
+    
+  public getDemandes(d) {
+    //let id=1; // temporaire 
+    console.log(d.id_demande);
+    let etat = false;
 
+    let demandeOuvertureCompteServiceInstance = new DemandeOuvertureCompteService(this.http)
+    this.demandeOuvertureCompte.validerOuvertureCompte(d.id_demande, etat) {
+      
 
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+    }
+
   }
+    
 }

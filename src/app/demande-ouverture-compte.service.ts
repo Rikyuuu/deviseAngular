@@ -15,13 +15,14 @@ export class DemandeOuvertureCompteService {
   }
 
   // Pour envoyer en POST les infos au format JSON afin de permettre au back-end d'effectuer la validation des comptes
-  validerOuvertureCompte(id: number, date: Date, etat: string, client: Object) {
+  // date: Date, etat: string, client: Object
+  validerOuvertureCompte(id: number, etat: boolean) {
       
+    id = 1;
+    etat = false;
     let data = {
       "id" : id,
-      "date" : date,
-      "etat": etat,
-      "client": client
+      "etat": etat
     }
   
     return this.http.post(this.url, data).subscribe(
